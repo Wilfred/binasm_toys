@@ -11,13 +11,13 @@ void print_char(char c) {
 }
 
 int main() {
-    char *buf = malloc(4 * sizeof(char));
+    unsigned char *buf = malloc(4 * sizeof(char));
     FILE *file;
     size_t nread;
 
     file = fopen("ascii.txt", "r");
     if (file) {
-        while ((nread = fread(buf, 1, 4 * sizeof(char), file)) > 0) {
+        while ((nread = fread(buf, 1, 4 * sizeof(unsigned char), file)) > 0) {
 
             printf("0x");
 
