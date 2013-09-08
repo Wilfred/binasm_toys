@@ -1,10 +1,13 @@
+CC=gcc
+CFLAGS=-g -Wall
+
 default: print_bytes
 
 hello: hello.c
-	gcc hello.c -o hello
+	$(CC) $(CFLAGS) hello.c -o hello
 
 print_bytes: print_bytes.c
-	gcc -Wall print_bytes.c -o print_bytes
+	$(CC) $(CFLAGS) print_bytes.c -o print_bytes
 
 clean:
 	rm -f hello
